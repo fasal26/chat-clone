@@ -409,6 +409,7 @@ import { cmpltUsers } from './SampleResponse';
   @media (max-width: 600px) {
       .chat-container {
         max-width: 100%;
+        margin: 40px 10px;
       }
   }
 </style>
