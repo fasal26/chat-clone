@@ -94,7 +94,7 @@ import { cmpltUsers } from './SampleResponse';
 
   // handler for arrow keys
   function handleKeydown(e: KeyboardEvent){
-    if (e.key == 'Enter' && !e.shiftKey) return sendMessage()
+    if (e.key == 'Enter' && !e.shiftKey && cursorPos.value == newMessage.value.length) return sendMessage()
     const charKey = e.key.length === 1;
     isChar.value = charKey && e.key != 'Backspace';
     isBack.value = e.key === 'Backspace';
