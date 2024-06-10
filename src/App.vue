@@ -94,6 +94,7 @@ import { cmpltUsers } from './SampleResponse';
 
   // handler for arrow keys
   function handleKeydown(e: KeyboardEvent){
+    if (e.key == 'Enter' && !e.shiftKey) return sendMessage()
     const charKey = e.key.length === 1;
     isChar.value = charKey && e.key != 'Backspace';
     isBack.value = e.key === 'Backspace';
@@ -244,6 +245,7 @@ import { cmpltUsers } from './SampleResponse';
       nextTick(() => {
         if(chatMessages.value)
         chatMessages.value.scrollTop = chatMessages.value.scrollHeight;
+        if (textarea.value) textarea.value.focus()
       });
     }
   }
