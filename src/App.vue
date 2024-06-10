@@ -344,7 +344,7 @@ import { cmpltUsers } from './SampleResponse';
     z-index: 10;
     max-height: 150px;
     overflow-y: auto;
-    width: 400px; /* Adjust width if needed */
+    width: 400px;
     padding: 15px;
   }
 
@@ -381,7 +381,6 @@ import { cmpltUsers } from './SampleResponse';
     height: 100%;
   }
 
-  /* HTML: <div class="loader"></div> */
   .loader {
     width: 20px;
     aspect-ratio: 1;
