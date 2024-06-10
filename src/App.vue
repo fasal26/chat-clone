@@ -114,9 +114,9 @@ import { cmpltUsers } from './SampleResponse';
     // handler for dropdown
     if (lttrAtCursor != '@') {
       const atPos = textTillCursor.lastIndexOf('@');
-      if (atPos == -1) return showDropdown.value = false
       let fromAtToCursor = newMessage.value.slice(atPos, cursorPos.value)
-      if (fromAtToCursor.indexOf("  ") != -1) return showDropdown.value = false
+      if (atPos == -1) return showDropdown.value = false
+      if (slctdUsers.value.find(f => f.startPos == atPos) || fromAtToCursor.indexOf("  ") != -1) return showDropdown.value = false
       let strWoAt = fromAtToCursor.substring(1)
       users.value = cmpltUsers.filter(f => f.username.toLowerCase().includes(strWoAt.trim().toLowerCase()))
       return
