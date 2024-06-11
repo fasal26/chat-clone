@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fasal26.github.io/chat-clone",
+  "homepage": "https://fasal26.github.io/chat-clone/",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
